@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>davidnard || home</title>
-    <link rel="stylesheet" href="./stylesheet.css" type="text/css" />
-    <style type="text/css">.body { width: auto; }</style>
-    <meta name="description" content="description"/>
-    <meta name="author" content="author" />
-    <meta name="keywords" content="keywords" />
-  </head>
-  <body>
-    <h2>home</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+</head>
+<body>
+  <h1>My Projects & Research</h1>
+  <div id="projects"></div>
 
-    <script src="script.js"></script>
-  </body>
+  <script>
+    const projects = [
+      { title: "Project 1", description: "A brief description of project 1." },
+      { title: "Research 1", description: "A brief description of research 1." },
+      { title: "Project 2", description: "A brief description of project 2." }
+    ];
+
+    const container = document.getElementById("projects");
+
+    projects.forEach(project => {
+      const div = document.createElement("div");
+      div.innerHTML = `<h2>${project.title}</h2><p>${project.description}</p>`;
+      container.appendChild(div);
+    });
+  </script>
+</body>
 </html>
